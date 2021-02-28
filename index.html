@@ -1,0 +1,250 @@
+# Blockchain.github.io
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function allowDrop(ev){
+   ev.preventDefault();
+}
+
+function drag(ev){
+   ev.dataTransfer.setData("content", ev.target.id);
+}
+
+function drop(ev){
+   ev.preventDefault();
+   var image = ev.dataTransfer.getData("content");
+   ev.target.appendChild(document.getElementById(image));
+
+}
+function showImage1(){
+        document.getElementById('loadingImage').style.visibility="visible";
+    }
+function showImage2(){
+        document.getElementById('loadingImage1').style.visibility="visible";
+    }
+
+</script>
+<script src="modernizr-latest.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<style>
+body
+    {
+        background-image: url('HTML/BG1.gif'); background-repeat: no-repeat;
+  background-size: cover;
+}
+#target1,#target2,#target3,#answer1Box,#answer2Box,#answer3Box,#block {
+  width: 250px;
+  height: 200px;
+  padding: 10px;
+  border: 1px solid  white;;
+  display: inline-block;
+}
+
+h1
+    {
+        font-family: sans-serif;
+        font-size: 50px;
+        color: white;
+        padding: 100px;
+        padding-right: 30px;
+    }
+p,h2
+    {
+        font-family: sans-serif;
+        font-size: 20px;
+        color: white;
+        padding: 10px;
+        padding-left: 5%;
+        
+    }
+div { 
+        /*setting alpha = 0.1*/ 
+         background: rgba(0, 0, 0, 0.8); 
+     } 
+li
+    {
+        display: inline-block;
+        margin: 0 10px;
+    }
+ul
+    {
+     font-family: sans-serif;
+        font-size: 20px;
+        color: white;
+        padding-left: 15%;
+    }
+a
+    {
+        color:skyblue;
+        font-size: 25px;
+        text-decoration: none;
+        padding-left: 8%;
+    }
+#img2
+    {
+        padding-left: 15%;
+        resize: 30px;
+        width: 850px;
+        height: 750px;
+    }
+#img1
+    {
+        padding-left: 40%;
+        width: 250px;
+        height: 250px;
+    }
+#img3,#loadingImage,#loadingImage1,#t
+{
+    padding-left: 40%;
+    }
+</style>
+</head>
+<body >
+    
+    <h1 id='id'>BLOCKCHAIN</h1>
+    <div class='list'>
+        <li><a href='#id2'>HISTORY</a></li>
+        <li><a href='#id3'>APPLICATIONS</a></li>
+        <li><a href='#id4'>CONCEPT</a></li>
+        <li><a href='#id5'>COURSES</a></li>
+        <li><a href='#id6'>VIDEOS</a></li>
+        <li><a href='#id7'>GAME</a></li>
+    </div>
+    <div class='c1' id='id1'>
+    <p>A blockchain,originally block chain is a growing list of records, called blocks, that are linked using cryptography.Each block contains a cryptographic hash of the previous block,a timestamp, and transaction data (generally represented as a Merkle tree). By design, a blockchain is resistant to modification of its data. This is because once recorded, the data in any given block cannot be altered retroactively without alteration of all subsequent blocks.</p>
+    </div>
+    <img id='img2'src='HTML/bc.jpg'>
+    <div class='c2'  id='id2'>
+        <h2>HISTORY</h2>
+    <p>
+        Cryptographer David Chaum first proposed a blockchain-like protocol in his 1982 dissertation "Computer Systems Established, Maintained, and Trusted by Mutually Suspicious Groups." Further work on a cryptographically secured chain of blocks was described in 1991 by Stuart Haber and W. Scott Stornetta.They wanted to implement a system where document timestamps could not be tampered with. In 1992, Haber, Stornetta, and Dave Bayer incorporated Merkle trees to the design, which improved its efficiency by allowing several document certificates to be collected into one block.
+        <br>
+        <br>
+        <img  id='img1'src="HTML/david%20chum.jpg" >  <br>
+    
+The first blockchain was conceptualized by a person (or group of people) known as Satoshi Nakamoto in 2008. Nakamoto improved the design in an important way using a Hashcash-like method to timestamp blocks without requiring them to be signed by a trusted party and introducing a difficulty parameter to stabilize rate with which blocks are added to the chain.The design was implemented the following year by Nakamoto as a core component of the cryptocurrency bitcoin, where it serves as the public ledger for all transactions on the network.
+        <br>
+        <img id='img1' src='HTML/satoshi.jpg'> 
+        <br>
+In August 2014, the bitcoin blockchain file size, containing records of all transactions that have occurred on the network, reached 20 GB (gigabytes).In January 2015, the size had grown to almost 30 GB, and from January 2016 to January 2017, the bitcoin blockchain grew from 50 GB to 100 GB in size. The ledger size had exceeded 200 GiB by early 2020.
+The words block and chain were used separately in Satoshi Nakamoto's original paper, but were eventually popularized as a single word, blockchain, by 2016.
+        </p>
+    </div>
+    <div class='c3'  id='id3'>
+    <h2>APPLICATION</h2>
+        <p>Blockchain applications go far beyond cryptocurrency and bitcoin. With its ability to create more transparency and fairness while also saving businesses time and money, the technology is impacting a variety of sectors in ways that range from how contracts are enforced to making government work more efficiently.<br><br>
+        12 PROMINENT BLOCKCHAIN APPLICATIONS TO KNOW
+        <ul>Secure sharing of medical data</ul>
+<ul>Music royalties tracking</ul>
+<ul>Cross-border payments</ul>
+<ul>Real-time IoT operating systems</ul>
+<ul>Personal identity security</ul>
+<ul>Anti-money laundering tracking system</ul>
+<ul>Supply chain and logistics monitoring</ul>
+<ul>Voting mechanism</ul>
+<ul>Advertising insights</ul>
+<ul>Original content creation</ul>
+<ul>Cryptocurrency exchange</ul>
+<ul>Real estate processing platform</ul>
+            <img id='img3' src='HTML/applications.png'>
+        </p>
+    
+    </div>
+    <div class='c4'  id='id4'>
+    <h2>CONCEPT</h2>
+        <p>Blockchain is a specific type of database.
+It differs from a typical database in the way it stores information; blockchains store data in blocks that are then chained together. 
+As new data comes in it is entered into a fresh block. Once the block is filled with data it is chained onto the previous block, which makes the data chained together in chronological order.Different types of information can be stored on a blockchain but the most common use so far has been as a ledger for transactions. 
+In Bitcoin’s case, blockchain is used in a decentralized way so that no single person or group has control—rather, all users collectively retain control.
+Decentralized blockchains are immutable, which means that the data entered is irreversible. For Bitcoin, this means that transactions are permanently recorded and viewable to anyone.<br><br>
+        Storage Structure:<br>
+One key difference between a typical database and a blockchain is the way the data is structured. A blockchain collects information together in groups, also known as blocks, that hold sets of information. Blocks have certain storage capacities and, when filled, are chained onto the previously filled block, forming a chain of data known as the “blockchain.” All new information that follows that freshly added block is compiled into a newly formed block that will then also be added to the chain once filled.
+
+A database structures its data into tables whereas a blockchain, like its name implies, structures its data into chunks (blocks) that are chained together. This makes it so that all blockchains are databases but not all databases are blockchains. This system also inherently makes an irreversible timeline of data when implemented in a decentralized nature. When a block is filled it is set in stone and becomes a part of this timeline. Each block in the chain is given an exact timestamp when it is added to the chain.</p>
+    <img  id='t'src='HTML/transaction.jpeg' width=500 height=400>
+    </div>
+    <div class='c5'  id='id5'>
+    <h2>COURSES</h2>
+        <a href="https://www.udemy.com/course/blockchain-theory-101/?LSNPUBID=JVFxdTr9V80&ranEAID=JVFxdTr9V80&ranMID=39197&ranSiteID=JVFxdTr9V80-enLKyawFVW5XM.A2WW4ZOw&utm_medium=udemyads&utm_source=aff-campaign">Blockchain Theory 101 (UDEMY)</a>
+        <p>Description:<br>Basic description, applications, and implication of blockchain technology</p>
+        <a href="https://academy.101blockchains.com/courses/blockchain-crash-course?ref=67086a">Introduction to Enterprise Blockchain (ACADEMY 101 BLOCKCHAINS)</a>
+        <p>Description:<br>This free course on enterprise blockchains gives you the unique opportunity to appreciate the extraordinary impact that blockchain technology has on enterprise business processes. You will get access to limited technology details, rich sets of business-related use cases, and real-life examples derived from interviews and research among corporate practitioners. 
+If you want to join the blockchain revolution and gain valuable knowledge to advance your career, this course is an important first step.
+</p>
+        <a href="https://www.pluralsight.com/courses/blockchain-fundamentals?clickid=WqGxAdzLfxyLUNZwUx0Mo3QQUkEQ2w1tq3U-2E0&irgwc=1&mpid=1193463&aid=7010a000001xAKZAA2&utm_medium=digital_affiliate&utm_campaign=1193463&utm_source=impactradius">Blockchain Fundamentals (PLURALSIGHT)</a>
+        <p>Description:<br>This course will teach you how to get productive with blockchain development quickly in a practical way. The focus is on Ethereum development and the concepts presented is equally relevant to other implementations.</p>
+        <a href="https://www.coursera.org/learn/blockchain-basics?ranMID=40328&ranEAID=JVFxdTr9V80&ranSiteID=JVFxdTr9V80-6D0lDda1Nnc1okYVXKnr.w&siteID=JVFxdTr9V80-6D0lDda1Nnc1okYVXKnr.w&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=JVFxdTr9V80">Blockchain Basics (COUSERA)</a>
+        <p>Description:<br>This first course of the Blockchain specialization provides a broad overview of the essential concepts of blockchain technology – by initially exploring the Bitcoin protocol followed by the Ethereum protocol – to lay the foundation necessary for developing applications and programming. You will be equipped with the knowledge needed to create nodes on your personal Ethereum blockchain, create accounts, unlock accounts, mine, transact, transfer Ethers, and check balances.</p>
+        <a href="https://www.udemy.com/course/ethereum-development-course-blockchain-at-berkeley/?ranMID=39197&ranEAID=JVFxdTr9V80&ranSiteID=JVFxdTr9V80-wOBzuqMk9M.5_CgXXl8Ofw&LSNPUBID=JVFxdTr9V80&utm_source=aff-campaign&utm_medium=udemyads">Ethereum Development Course - Blockchain at Berkeley (UNDEMY)</a>
+        <p>Description:<br>This course will teach you how to become an experienced solidity developer</p>
+        <a href="https://www.pluralsight.com/courses/blockchain-principles-practices?clickid=WqGxAdzLfxyLUNZwUx0Mo3QQUkEQ21Txq3U-2E0&irgwc=1&mpid=1193463&aid=7010a000001xAKZAA2&utm_medium=digital_affiliate&utm_campaign=1193463&utm_source=impactradius">Blockchain – Principles and Practices (PLURALSIGHT)</a>
+        <p>Description:<br>In this course, you will delve beneath the covers of Blockchain technologies to see how they work. Having an understanding of how this technology operates is essential to understanding platforms like BitCoin and Ethereum or other providers.</p>
+        <a href="https://www.edx.org/course/blockchain-technology?source=aw&awc=6798_1614444726_87f1e658a34d2ec52c38dbaadfeaf5b0&utm_source=aw&utm_medium=affiliate_partner&utm_content=text-link&utm_term=631878_javarevisited">Blockchain Technology (EDX)</a>
+        <p>Description:<br> Learn the fundamentals of blockchain technology and how it will power the economy of tomorrow.</p>
+    </div>
+    <div class='c6' id='id6'>
+    <h2>VIDEOS ON BLOCK CAHIN CONCEPT</h2></div>
+    <iframe width="420" height="315"
+src="https://www.youtube.com/embed/SSo_EIwHSd4">
+    </iframe>
+    <p>FULL COURSE VIDEO (EDUREKHA)</p><br>
+    <iframe width="420" height="315"
+src="https://www.youtube.com/embed/QCvL-DWcojc">
+    </iframe>
+    <p>FULL COURSE VIDEO (SIMPLILERAN)</p><br>
+    <iframe width="420" height="315"
+src="https://www.youtube.com/embed/SyVMma1IkXM">
+    </iframe>
+    <div class='c7' id='id7'>
+    <h2>GAME</h2>
+    <p> a Small drag and drop game to visualize the concept. give it a try</p>
+    <br>
+        <p>Order the images in correct sequence</p>
+    <div id="answerBoxes">
+    <div id="target1" ondrop="drop(event)" ondragover="allowDrop(event)">
+    </div>
+    <div id="target2" ondrop="drop(event)" ondragover="allowDrop(event)">
+    </div>
+    <div id="target3" ondrop="drop(event)" ondragover="allowDrop(event)">
+    </div>
+    </div> <!-- end of answerBoxes -->
+    <div id="whatsWhatContent">
+    <div id="answers">
+   <div id="answer2Box" ondrop="drop(event)" ondragover="allowDrop(event)">
+       <img id="answer2" src="HTML/step%202%20(transaction).png" draggable="true" ondragstart="drag(event)" width="250" height="200" >
+   </div>
+
+
+   <div id="answer3Box" ondrop="drop(event)" ondragover="allowDrop(event)">
+       <img id="answer3" src="HTML/step%203%20(transaction).png"  draggable="true" ondragstart="drag(event)" width="250" height="200">
+</div>
+   <div id="answer1Box" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <img id="answer1" src="HTML/step%201%20(transaction).png"  draggable="true" ondragstart="drag(event)" width="250" height="200">
+</div>
+        <br>
+    <br>
+     <input type="button" value="Click Once Completed" onclick="showImage1();"/>
+    <br>
+    <img id="loadingImage" src="HTML/answer.png" style="visibility:hidden" width="250" height="200"/>
+    <br>
+        <p>Drag all the Blocks to Create A Block Chain</p>    
+    <div id="block" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <img id="b1" src="HTML/block1.jpg"  draggable="true" ondragstart="drag(event)" width="250" height="200">
+     <img id="b2" src="HTML/block1.jpg"  draggable="true" ondragstart="drag(event)" width="250" height="200">
+     <img id="b3" src="HTML/block1.jpg"  draggable="true" ondragstart="drag(event)" width="250" height="200">
+     <img id="b4" src="HTML/block1.jpg"  draggable="true" ondragstart="drag(event)" width="200" height="200">
+    <br>
+     <input type="button" value="Click Once Completed" onclick="showImage2();"/>
+    <br>
+    <img id="loadingImage1" src="HTML/blockchain.png" style="visibility:hidden"/>
+
+    </div>    
+    <br>
+    <br>
+    <a href='#id'>Back To TOP</a>
+    <br>
+
+</body>
+    
+</html>
